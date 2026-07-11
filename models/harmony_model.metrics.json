@@ -1,0 +1,33 @@
+{
+  "model_path": "C:\\Users\\lenovo\\Documents\\BandScribe\\models\\harmony_model.npz",
+  "dataset": "synthetic_chord_progressions_v1",
+  "scope": "12 major keys and 3 progression classes",
+  "seed": 20260711,
+  "train_samples": 288,
+  "test_samples": 72,
+  "train_variations": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "test_variations": [
+    8,
+    9
+  ],
+  "train": {
+    "key_accuracy": 1.0,
+    "progression_accuracy": 1.0,
+    "joint_accuracy": 1.0
+  },
+  "test": {
+    "key_accuracy": 1.0,
+    "progression_accuracy": 1.0,
+    "joint_accuracy": 1.0
+  },
+  "caveat": "Synthetic holdout accuracy is not real-song accuracy."
+}
