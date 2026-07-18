@@ -10,5 +10,4 @@ if (Test-Path $BundledPython) {
     $Python = (Get-Command python -ErrorAction Stop).Source
 }
 
-& $Python -m streamlit run app.py --server.port 8501 --server.address localhost
-
+& $Python -m streamlit run streamlit_app.py --server.port 8501 --server.address localhost

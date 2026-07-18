@@ -116,6 +116,10 @@ def run_demucs(upload_path: Path, job_dir: Path, use_demucs: bool = True) -> Sep
         "demucs",
         "-n",
         "htdemucs_6s",
+        "-d",
+        "cpu",
+        "-j",
+        "1",
         "--out",
         str(out_dir),
         str(upload_path),
@@ -814,9 +818,3 @@ def build_analysis(root: Path, job_id: str, upload_path: Path, use_demucs: bool 
         "artifacts": artifacts,
         "notation": notation,
     }
-
-
-
-
-
-

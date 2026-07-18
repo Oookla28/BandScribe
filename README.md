@@ -14,7 +14,7 @@ BandScribe is a Streamlit app for quick band transcription sketches. The first t
 
 ```powershell
 python -m pip install -r requirements.txt
-streamlit run app.py
+streamlit run streamlit_app.py
 ```
 
 On this Windows machine, `python` may not be on `PATH`. Use the bundled runtime directly:
@@ -28,7 +28,7 @@ For real source separation:
 
 ```powershell
 python -m pip install -r requirements-demucs.txt
-streamlit run app.py
+streamlit run streamlit_app.py
 ```
 
 With the bundled runtime:
@@ -40,6 +40,14 @@ With the bundled runtime:
 
 If demucs is not installed or fails, BandScribe keeps going by using the original audio as a placeholder track.
 
+## Deploy to Streamlit Community Cloud
+
+1. Push this repository to GitHub.
+2. Open https://share.streamlit.io and choose Create app.
+3. Select Oookla28/BandScribe, branch main, and entrypoint streamlit_app.py.
+4. Choose a public custom subdomain such as bandscribe-oookla28, then deploy.
+
+Only source files are committed. Runtime uploads, Demucs stems, previews, and feedback stay under outputs/ and are intentionally excluded from GitHub.
 ## Checkpoints
 
 1. Stage 0: Upload an audio file. Verify that the original player appears and a file is written under `outputs/uploads/`.
@@ -81,5 +89,3 @@ If `python` is not on `PATH`:
 ```
 
 It creates a small synthetic WAV, runs the fallback pipeline, and prints artifact paths.
-
-
